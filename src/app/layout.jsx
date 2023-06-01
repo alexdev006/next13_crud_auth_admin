@@ -1,9 +1,9 @@
 import Footer from './components/footer/Footer.jsx';
 import Navbar from './components/navbar/Navbar.jsx';
 import './globals.css';
-import { Roboto } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-const inter = Roboto({ subsets: ['latin'], weight: '300' });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Create Next App',
