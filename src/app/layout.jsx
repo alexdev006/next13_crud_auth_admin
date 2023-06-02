@@ -1,4 +1,4 @@
-import { ThemeProvider } from '../../context/ThemeContext.jsx';
+import { ThemeProvider } from '@/context/ThemeContext.jsx';
 import Footer from './components/footer/Footer.jsx';
 import Navbar from './components/navbar/Navbar.jsx';
 import './globals.css';

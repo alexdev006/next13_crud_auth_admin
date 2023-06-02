@@ -2,23 +2,39 @@ import React from 'react';
 import styles from './page.module.css';
 import Button from '@/app/components/button/Button.jsx';
 import Image from 'next/image.js';
+import { items } from './data.js';
+import { notFound } from 'next/navigation';
+
+// const getLocalJsonData = (cat) => {
+//   const data = items[cat];
+
+//   if (data) {
+//     return data;
+//   }
+
+//   return notFound();
+// };
 
 const Category = ({ params }) => {
   //console.log('params ici =>>>>', params);
+  // const data = getLocalJsonData(params.category); //category est le nom du dossier de l'arbo
 
   return (
     <div className={styles.container}>
       <h1 className={styles.catTitle}>{params.category}</h1>
-      <div className={styles.item}>
-        <div className={styles.content}>
-          <h1>test</h1>
-          <p>desc</p>
-          <Button text="Voir plus" url="#" />
+
+      {/* {data.map((item) => (
+        <div className={styles.item} key={item.id}>
+          <div className={styles.content}>
+            <h1 className={styles.title}>{item.title}</h1>
+            <p className={styles.desc}>{item.desc}</p>
+            <Button text="See More" url="#" />
+          </div>
+          <div className={styles.imgContainer}>
+            <Image className={styles.img} fill={true} src={item.image} alt="" />
+          </div>
         </div>
-        <div className={styles.imgContainer}>
-          <Image className={styles.img} alt="" src="/apps.jpg" fill />
-        </div>
-      </div>
+      ))} */}
     </div>
   );
 };
